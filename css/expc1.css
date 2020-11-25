@@ -1,0 +1,89 @@
+body {
+  text-align: center;
+}
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+#services {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+#press {
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 70px 50px 50px;
+}
+
+.icon {
+  color: #101010;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #333333;
+}
+
+#pricing {
+  padding: 100px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+.app-image {
+  width: 40%;
+  transform: rotate(25deg);
+  /* position: absolute; */
+  right: 30%;
+}
+/* #features,
+#services {
+  position: relative;
+} */
+
+.footer,
+.footer-card {
+  background-color: #000000;
+}
+
+.color-1,
+.color-2 {
+  background-color: #fff;
+}
+
+/* loding lodder */
+
+@media (max-width: 1028px) {
+  .app-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+.jumbotron-web{
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.jumbotron-sft{
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
