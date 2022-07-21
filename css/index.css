@@ -2,3 +2,233 @@
   width: 30%;
   height: 10%;
 }
+
+.full-screen{
+  padding: 3rem;
+}
+
+.black-text{
+  color: #000000;
+}
+
+.contact{
+  margin-top: 10px;
+}
+
+.project {
+    padding: 130px 0;
+    margin-top: 10px;
+}
+
+.project .heading h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+
+.project .heading h2 span {
+    color: #F24259;
+}
+
+.project .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 60px;
+    padding: 0;
+}
+
+.project h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.project p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 15px;
+    padding: 0;
+}
+
+.project h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.project h4 i {
+    color: #F24259;
+    margin-right: 10px;
+}
+
+/* cards designing starts here */
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* background-color: rgba(0,0,0,.5); */
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  padding-left: 25px;
+  border-radius: 0px 0px 40px 40px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -250px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+.card .card_title p{
+  color: #000000;
+  font-size: 20px;
+}
+
+/* -------------------reviews code----------------------- */
+/* body {
+  color: #1a1a1a;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6em;
+  text-align: center;
+  background: #757f9a;
+  background: -webkit-linear-gradient(to left, #d7dde8, #757f9a);
+  background: linear-gradient(to left, #d7dde8, #757f9a);
+} */
+
+#content {
+  max-width: 400px;
+  margin: 15vh auto;
+}
+
+.testimonial blockquote {
+  /* margin: 10px 10px 0; */
+  background: #efefef;
+  padding: 20px 60px;
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.testimonial blockquote:before,
+.testimonial blockquote:after {
+  content: "\201C";
+  position: absolute;
+  font-size: 80px;
+  line-height: 1;
+  color: #757f9a;
+  font-style: normal;
+}
+
+.testimonial blockquote:before {
+  top: 0;
+  left: 10px;
+}
+
+.testimonial blockquote:after {
+  content: "\201D";
+  right: 10px;
+  bottom: -0.5em;
+}
+
+.testimonial div {
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #efefef;
+  margin: 0 0 0 60px;
+}
+
+.testimonial p {
+  margin: 8px 0 0 20px;
+  text-align: left;
+  color: #fff;
+}
+
+/* testi,omial---------------------------------- */
+
+
+
+
+/* my code */
+
+.container{
+  padding-bottom: 10px;
+}
+
+#navbarNav{
+  background-color: white;
+}
+
+#info{
+  margin-top: 70px;
+}
+.container-lg{
+  padding-bottom: 50px;
+}
+
+.card_handle_90{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+}

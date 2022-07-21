@@ -1,235 +1,654 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Samwidhan.com</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/unicons.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <title>Samwidhan</title>
 
-    <!-- MAIN STYLE -->
-    <link rel="stylesheet" href="css/tooplate-style.css">
-    <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/unicons.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-<!--
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+body {
+	font-family: "Open Sans", sans-serif;
+}
+h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	position: relative;
+	margin: 0 0 50px 0;
+	text-transform: uppercase;
+	display: inline-block;
+}
+h2::after {
+	content: "";
+	width: 50%;
+	position: absolute;
+	height: 4px;
+	border-radius: 1px;
+	background: #ff5555;
+	left: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+}
+.carousel .carousel-item {
+	color: #999;
+	overflow: hidden;
+    min-height: 120px;
+	font-size: 13px;
+}
+.carousel .media {
+	position: relative;
+	padding: 0 0 0 20px;
+	margin-left: 20px;
+}
+.carousel .media img {
+	width: 75px;
+	height: 75px;
+	display: block;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border: 2px solid #fff;
+}
+.carousel .testimonial {
+    color: #fff;
+    position: relative;    
+    background: #9b9b9b;
+	padding: 15px;
+	margin: 0 0 20px 20px;
+}
+.carousel .testimonial::before, .carousel .testimonial::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+}
+.carousel .testimonial::before {
+    width: 20px;
+    height: 20px;
+	background: #9b9b9b;
+	box-shadow: inset 12px 0 13px rgba(0,0,0,0.5);
+}
+.carousel .testimonial::after {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    border-left-color: #fff;
+}
+.carousel .carousel-item .row > div:first-child .testimonial {
+	margin: 0 20px 20px 0;
+}
+.carousel .carousel-item .row > div:first-child .media {
+	margin-left: 0;
+}
+.carousel .testimonial p {
+	text-indent: 40px;
+    line-height: 21px;
+	margin: 0;
+}
+.carousel .testimonial p::before {
+	content: "\201D";
+  	font-family: Arial,sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 68px;
+    line-height: 70px;
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+.carousel .overview {
+	padding: 3px 0 0 15px;
+}
+.carousel .overview .details {
+	padding: 5px 0 8px;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #ff5555;
+}
+.carousel-control-prev, .carousel-control-next {
+	width: 30px;
+	height: 30px;
+    background: #666;
+    text-shadow: none;
+	top: 4px;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 16px;
+}
+.carousel-control-prev {
+	left: auto;
+	right: 40px;
+}
+.carousel-control-next {
+	left: auto;
+}
+.carousel-indicators {
+	bottom: -80px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 17px;
+    height: 17px;
+	border-radius: 0;
+	margin: 1px 5px;
+  	box-sizing: border-box;
+}
+.carousel-indicators li {	
+    background: #e2e2e2;
+    border: 4px solid #fff;
+}
+.carousel-indicators li.active {
+	color: #fff;
+    background: #ff5555;
+    border: 5px double;    
+}
+.star-rating li {
+	padding: 0 2px;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffdc12;
+}
+</style>
+
+  <!-- MAIN STYLE -->
+  <link rel="stylesheet" href="css/tooplate-style.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <!--
 
 Tooplate 2115 Marvel
 
 https://www.tooplate.com/view/2115-marvel
 
 -->
-  </head>
-  <body>
+</head>
 
-    <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Samwidhan.com</a>
+<body>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-sm navbar-light" id="navbarNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Samwidhan.com</a>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                  <li class="nav-item">
-                      <a href="#resume" class="nav-link"><span data-hover="Lawyers">Lawyers</span></a>
-                  </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link"><span data-hover="About us">About us</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#project" class="nav-link"><span data-hover="Review">Review</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
-                    </li>
-                </ul>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
 
-                <ul class="navbar-nav mx-auto">
-                  <li class="nav-item">
-                    <a href="login.html" class="nav-link">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#SingUp" class="nav-link">Sign Up</a>
-                  </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-        <div class="container">
-            <div class="row">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="lawyer_team.html" class="nav-link"><span data-hover="Lawyers">Lawyers</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#info" class="nav-link"><span data-hover="About us">About us</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#project" class="nav-link"><span data-hover="Review">Review</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+          </li>
+        </ul>
 
-                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                    <div class="about-text">
-                        <small class="small-text">Let's Get<span class="mobile-block"> Started..!</span></small>
-                        <h1 class="animated animated-text">
-                            <span class="mr-2">Searching for a</span>
-                                <div class="animated-info">
-                                    <span class="animated-item">Lawyer..?</span>
-                                    <span class="animated-item">Internship..?</span>
-                                    <span class="animated-item">Publisher..?</span>
-                                </div>
-                        </h1>
-
-                        <p>Let us help you out, finding a Perfect Lawyer for you, or an Internship under a well known Lawyer ;) or you want to publish a paper..? We have coverd all your problems...</p>
-
-                        <div class="custom-btn-group mt-4">
-                          <a href="login.html" class="btn mr-lg-2 custom-btn"><i class="uil uil-file-alt"></i>Let's Get Started</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-12 col-12">
-                    <div class="about-image svg">
-                        <img src="images/undraw/undraw_software_engineer_lvl5.png" class="img-fluid" alt="svg image">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="project py-5" id="project">
-        <div class="container">
-
-                <div class="row">
-                  <div class="col-lg-11 text-center mx-auto col-12">
-
-                      <div class="col-lg-8 mx-auto">
-                        <h2>Things I have designed for digital media agencies</h2>
-                      </div>
-
-                      <div class="owl-carousel owl-theme">
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image02.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image03.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image04.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image05.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-                      </div>
-
-                  </div>
-                </div>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-
-    <!-- CONTACT -->
-    <section class="contact py-5" id="contact">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-5 mr-lg-5 col-12">
-            <div class="google-map w-100">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.558402180099!2d-73.99373482142036!3d40.75895421922642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855b8fb3083%3A0xa0f9aef176042a5c!2sTheater+District%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2smm!4v1549875377188" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-
-            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-                <div class="contact-info-item">
-                  <h3 class="mb-3 text-white">Say hello</h3>
-                  <p class="footer-text mb-0">010 020 0960</p>
-                  <p><a href="mailto:hello@company.co">hello@company.co</a></p>
-                </div>
-
-                <ul class="social-links">
-                     <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a></li>
-                     <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
-                     <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li>
-                </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12">
-            <div class="contact-form">
-              <h2 class="mb-4">Interested to work together? Let's talk</h2>
-
-              <form action="" method="get">
-                <div class="row">
-                  <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
-                  </div>
-
-                  <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
-                  </div>
-
-                  <div class="ml-lg-auto col-lg-5 col-12">
-                    <input type="submit" class="form-control submit-btn" value="Send Button">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-        </div>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="login.html" class="nav-link"> Students Section </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#SingUp" class="nav-link">Sign Up</a>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- FOOTER -->
-     <footer class="footer py-5">
-          <div class="container">
-               <div class="row">
+  <!-- ABOUT -->
+  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+      <div class="row">
 
-                    <div class="col-lg-12 col-12">
-                        <p class="copyright-text text-center">Copyright &copy; 2021 <a rel="nofollow" href="#">VPDevelopers</a> . All rights reserved</p>
-                        <p class="copyright-text text-center">Designed by VPD with Love</p>
-                    </div>
-
-               </div>
+        <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+          <div class="about-text animated fadeInLeft">
+            <small class="small-text">Let's Get<span class="mobile-block"> Started..!</span></small>
+            <h1 class="animated animated-text">
+              <span class="mr-2">Searching for </span>
+              <div class="animated-info">
+                <span class="animated-item">Lawyer..?</span>
+                <span class="animated-item">Internship..?</span>
+                <span class="animated-item">Publisher..?</span>
+              </div>
+            </h1>
+            <p class="black-text">Let us help you out, finding a Perfect Lawyer for you, or an Internship under a well known Lawyer ;) or you want to publish a paper..? We have coverd all your problems...</p>
           </div>
-     </footer>
+        </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    
+        <div class="col-lg-5 col-md-12 col-12">
+          <div class="about-image svg animated fadeInUp">
+            <img src="images/undraw/undraw_software_engineer_lvl5.png" class="img-fluid" alt="svg image">
+          </div>
+        </div>
 
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <!-- Options -->
+  <div class="wrapper">
+    <br>
+    <br>
+    <br>
+    <h1 class="options animated fadeInLeft">Help us to know your motive better.</h1>
+    <br>
+  </div>
+
+  <!-- cards body -->
+  <div class="card_handle_90">
+ <div class="cards-list">
+<a href="lawyer_team.html">
+  <div class="card 1">
+    <div class="card_image"> <img src="https://img.freepik.com/free-photo/modern-trader_1098-13889.jpg?t=st=1657724261~exp=1657724861~hmac=27e699b0331ffc257458d08f09d07df05c2a6516aa415b8682bda12ef08f81ae&w=996" /> </div>
+      <div class="card_title title-white">
+        <p>Lawyers</p>
+        <h3>250+</h3>
+      </div>
+    </div>
+</a>
+
+<a href="#">
+  <div class="card 1">
+    <div class="card_image"> <img src="https://img.freepik.com/free-photo/happy-female-professional-glasses-suit-holding-tablet-making-winner-gesture-while-two-businessmen-working-glass-wall-copy-space-communication-concept_74855-14248.jpg?t=st=1657724261~exp=1657724861~hmac=b61458aad34addbf68eaf009a25f07beae4b1ba12dd234046c5bf897fc1861db&w=996" /> </div>
+      <div class="card_title title-white">
+        <p>Internship</p>
+        <h3>1200+</h3>
+      </div>
+    </div>
+</a>
+
+<a href="#">
+  <div class="card 1">
+    <div class="card_image"> <img src="https://img.freepik.com/premium-photo/hand-businesswoman-writing-paper-office_181624-46933.jpg?w=996" /> </div>
+      <div class="card_title title-white">
+        <p>Publish paper</p>
+        <h3>20+</h3>
+      </div>
+    </div>
+</a>
+
+</div>
+</div>
+
+
+
+  <!-- PROJECTS -->
+  <section class="project py-5" id="info">
+    <div class="container">
+               <div class="heading text-center">
+                   <h2>Our
+                       <span>Mission</span></h2>
+                   <p>
+                    We are on a mission to create a community for Law, where students can practice law, Where clients can hier Lawyers,
+                    Providing a platform where anybody can write and can publish their research papers.
+                   </p>
+               </div>
+               
+               </div>
+           </div>
+
+  </section>
+
+  <!-- reviews -->
+    <div class="wrapper">
+    <h1 class="options animated fadeInLeft">Community reviews by experts & students.</h1>
+  </div>
+
+
+<!-- *****************************crousule starts here*************************** -->
+<div class="container-lg">
+	<div class="row">
+		<div class="col-sm-12">			
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="testimonial">
+									<p>
+                    This was the first time I have joined as a intern in a remote format, and I will be coming back for such internships and training to gain more exprences
+                    .I loved the fact that the actual physical space was private and quiet and very conducive to learning! Thank you.
+                  </p>
+								</div>
+								<div class="media">
+									<img src="images/project/p7.jpg">
+									<div class="media-body">
+										<div class="overview">
+											<div class="name"><b>Paula Wilson</b></div>
+											<div class="details">Advocate / SkyNet</div>
+											<div class="star-rating">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="testimonial">
+									<p>
+                    It was very effective and therefore I would definitely be interested in attending other classes in the same format. 
+                    The instructor was very knowlegeable and provided a wealth of information about the current version, especially since the last version I used was several releases ago."
+                  </p>
+								</div>
+								<div class="media">
+									<img src="images/project/p2.jpg">
+									<div class="media-body">
+										<div class="overview">
+											<div class="name"><b>Payal Singh</b></div>
+											<div class="details">Analyst / SoftBee</div>
+											<div class="star-rating">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="testimonial">
+									<p>"I've never completed a project like this before (remotely) and I cannot express how great the exprences was and the overall content of the internship. 
+                    I would defintely recommend this to my co-workers as well as friends. Thank you!"
+                  </p>
+								</div>
+								<div class="media">
+									<img src="images/project/p9.jpg">
+									<div class="media-body">
+										<div class="overview">
+											<div class="name"><b>Aman Kumar</b></div>
+											<div class="details">Student</div>											
+											<div class="star-rating">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="testimonial">
+									<p>
+                    I am not easily impressed and do not usually complete projects.The best I've experienced on a client side,
+                    and I couldn't imagine her doing a better job of seamlessly walking students through a breadth of information in a remote environment. 
+                  </p>
+								</div>
+								<div class="media">
+									<img src="images/project/p4.jpg">
+									<div class="media-body">
+										<div class="overview">
+											<div class="name"><b>Mary Desuza</b></div>
+											<div class="details">Student</div>
+											<div class="star-rating">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="testimonial">
+									<p>
+                    "I was not sure the internship was taught remotely, but I was quite impressed with the entire process. There were no 
+                    problems with connectivity. We worked on a live projects. All my doubts were cleared during my internship.
+                  </p>
+								</div>
+								<div class="media">
+									<img src="images/project/p5.jpg" class="mr-3" alt="">
+									<div class="media-body">
+										<div class="overview">
+											<div class="name"><b>Martin Sommer</b></div>
+											<div class="details">SEO Analyst / RealSearch</div>
+											<div class="star-rating">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="testimonial">
+									<p>"I never took a remote intership before but I will highly recommend this type of internships. It felt relaxed and at a nice pace that I feel I came away with lots to use at my workplace.
+                     Thank you!"
+                    </p>
+								</div>
+								<div class="media">
+									<div class="media-left d-flex mr-3">
+										<img src="images/project/p6.jpg">										
+									</div>
+									<div class="media-body">
+										<div class="overview">
+											<div class="name"><b>John Williams</b></div>
+											<div class="details">Advocate / UniqueDesign</div>
+											<div class="star-rating">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+				<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- *****************************crousel ends here******************************** -->
+<br>
+<br>
+<!-- ***************************SECOND CROUSL STARTS HERE***************************** -->
+
+<!-- ***************************SECOND CROUSEUL ENDS HERE**************************** -->
+
+
+
+
+  <!-- <div id="content">
+    <div class="testimonial">
+      <blockquote>
+        The reviewer liked your product. Now you need to keep the same level of enthusiasm for it! Don’t just respond with “thank you,” because that won’t make the customer feel as though they had anything worth talking about or bringing up in their review. 
+      </blockquote>
+    </div>
+  </div> -->
+
+  
+
+  <!-- <div class="col-lg-3 mb-4">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#">
+                <img  src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg" alt="wrapkit" class="img-fluid rounded-circle" /></a>
+            </div>
+          <div class="col-md-12 text-center">
+            <div class="pt-2">
+              <h5 class="mt-4 font-weight-medium mb-0">Michael Doe</h5>
+              <h6 class="subtitle mb-3">Property Specialist</h6>
+              <p class="black-text">You can relay on our amazing features list and also our customer services will be great experience.</p>
+              <div class="icons">
+					<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgba(149,164,166,1)"/></svg></a>
+					<a href="#" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" fill="rgba(149,164,166,1)"/></svg></a>
+					<a href="#" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z" fill="rgba(149,164,166,1)"/></svg></a>
+					<a href="#" class="linkedin_blue_90" >&nbsp<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" fill="rgba(149,164,166,1)"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+  <!-- FEATURES -->
+
+  <!-- CONTACT -->
+  <section class="contact py-5" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mr-lg-5 col-12">
+          <div class="google-map w-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1834.8037618836115!2d72.59350427257554!3d23.111458919308138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e837d39ebf951%3A0xf9ceeb165d3bc39b!2sVirtual%20Product%20Developers!5e0!3m2!1sen!2sin!4v1655728347897!5m2!1sen!2sin"
+              width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+          <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+            <div class="contact-info-item">
+              <h3 class="mb-3 text-white">Say Hello</h3>
+              <p class="footer-text mb-0">+91 700 148 5295</p>
+              <p><a href="mailto:atudu16@gmail.com">atudu16@gmail.com</a></p>
+            </div>
+
+            <ul class="social-links">
+              <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a></li>
+              <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+              <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-12">
+          <div class="contact-form">
+            <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+            <form action="" method="get">
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                </div>
+
+                <div class="col-12">
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                </div>
+
+                <div class="ml-lg-auto col-lg-5 col-12">
+                  <input type="submit" class="form-control submit-btn" value="Send">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 col-12">
+          <p class="black-text copyright-text text-center">Copyright &copy; 2021 <a rel="nofollow" href="#">VPDevelopers</a> . All rights reserved</p>
+          <p class="black-text copyright-text text-center">Designed by <a href="#" target="_blank">VPD</a> with Love in association with <a href="http://scibiscus.tech/" target="_blank">scibiscusIndia</a></p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Headroom.js"></script>
+  <script src="js/jQuery.headroom.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+</body>
 </html>
